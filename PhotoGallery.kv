@@ -1,0 +1,43 @@
+Display
+
+<Display>:
+    StackLayout:
+        orientation: "lr-tb"
+        TextInput:
+            id: image_name
+            hint_text: "Enter image name"
+            size_hint: .5,.06
+        Button:
+            text: "Load image"
+            size_hint: .5,.06
+            on_release: root.display_image(True)
+        Button:
+            text: "Black & white"
+            size_hint: .5,.06
+        Button:
+            text: "Inverse"
+            size_hint: .5,.06
+        Button:
+            text: "Line drawing"
+            size_hint: .5,.06
+        Button:
+            text: "Pointillism"
+            size_hint: .5,.06
+        Button:
+            text: "Sepia"
+            size_hint: .5,.06
+        Button:
+            text: "Pixelate"
+            size_hint: .5,.06
+
+
+
+
+
+
+
+
+        Image:
+            id: image
+            source: root.display_image(True)
+            size_hint: 1,3
