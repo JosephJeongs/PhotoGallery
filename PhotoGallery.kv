@@ -10,31 +10,31 @@ Display
         Button:
             text: "Load image"
             size_hint: .5,.06
-            #on_release: root.display_image(True)
+            on_release: root.load(what_image.text)
         Button:
             text: "Black & white"
             size_hint: .5,.06
-            on_release: root.black_white("lfa.jpg")
+            on_release: root.black_white(what_image.text)
         Button:
             text: "inverse"
             size_hint: .5,.06
-            on_release: root.inverse("lfa.jpg","lfa")
+            on_release: root.inverse(what_image.text)
         Button:
             text: "Line drawing"
             size_hint: .5,.06
-            on_release: root.line_drawing("lfa.jpg")
+            on_release: root.line_drawing(what_image.text)
         Button:
             text: "Pointillism"
             size_hint: .5,.06
-            on_release: root.pointillism("lfa.jpg","lfa")
+            on_release: root.pointillism(what_image.text)
         Button:
             text: "Sepia"
             size_hint: .5,.06
-            on_release: root.sepia("lfa.jpg","lfa")
+            on_release: root.sepia(what_image.text)
         Button:
             text: "Pixelate"
             size_hint: .5,.06
 
-
         Image:
+            id: img
             source: root.display_image(what_image.text)
