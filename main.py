@@ -20,8 +20,8 @@ class Display(Screen):
     def black_white(self,image):
         img = Image.open(image)
         BaW = img.convert("L")
-        BaW.save(image+"black_white.png")
-        self.ids.img.source = (image+"black_white.png")
+        BaW.save("black_white.png")
+        self.ids.img.source = ("black_white.png")
 
     def inverse(self,image):
         img = Image.open(image)
@@ -32,8 +32,8 @@ class Display(Screen):
                 green = 255 - pixels[x, y][1]
                 blue = 255 - pixels[x, y][2]
                 pixels[x, y] = (red, green, blue)
-        img.save(image+"invert.png")
-        self.ids.img.source = (image+"invert.png")
+        img.save("invert.png")
+        self.ids.img.source = ("invert.png")
 
     def line_drawing(self,image):
         image = Image.open(image)
@@ -58,8 +58,8 @@ class Display(Screen):
             draw = ImageDraw.Draw(canvas)
             draw.ellipse(ellipsebox, fill=(pixels[x, y][0], pixels[x, y][1], pixels[x, y][2]))
             del draw
-        canvas.save(image+"pointillism.png")
-        self.ids.img.source = (image+"pointillism.png")
+        canvas.save("pointillism.png")
+        self.ids.img.source = ("pointillism.png")
 
     def sepia(self,image):
         img = Image.open(image)
@@ -74,8 +74,8 @@ class Display(Screen):
                 green = int(red * .349 + green * 0.686 + blue * 0.168)
                 blue = int(red * .272 + green * 0.534 + blue * 0.131)
                 pixels[x, y] = (red, green, blue)
-        img.save(image+"sepia.png")
-        self.ids.img.source = (image+"sepia.png")
+        img.save("sepia.png")
+        self.ids.img.source = ("sepia.png")
 
 images = ["lfa.jpg","blue_flower.jpg"]
 
